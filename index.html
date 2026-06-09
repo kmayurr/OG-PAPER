@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MADE FOR OG | Every Day, The OG Way</title>
+<title>OG Paper</title>
 
 <style>
 
@@ -12,7 +13,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
     scroll-behavior:smooth;
 }
 
@@ -26,6 +27,7 @@ body{
 header{
     position:fixed;
     top:0;
+    left:0;
     width:100%;
     background:#111;
     display:flex;
@@ -37,8 +39,58 @@ header{
 }
 
 .logo img{
-    height:auto;
+    height:60px;
     width:auto;
+    display:block;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#3A6A1F;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 40px;
+}
+
+.hero-logo{
+    width:350px;
+    max-width:90%;
+    height:auto;
+    margin-bottom:30px;
+}
+
+.tagline{
+    font-size:24px;
+    color:#cccccc;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#3A6A1F;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:bold;
 }
 
 /* Sections */
@@ -49,12 +101,12 @@ section{
 
 .section-title{
     text-align:center;
+    font-size:42px;
     color:#3A6A1F;
-    font-size:40px;
     margin-bottom:30px;
 }
 
-.about p{
+.about-content{
     max-width:900px;
     margin:auto;
     text-align:center;
@@ -64,38 +116,39 @@ section{
 
 /* Products */
 
-.products-grid{
+.products{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
 
-.product-card{
+.card{
     background:#171717;
     border:1px solid #222;
     border-radius:15px;
     overflow:hidden;
-    text-align:center;
 }
 
-.product-card img{
+.card img{
     width:100%;
-    height:250px;
-    object-fit:cover;
+    display:block;
 }
 
-.product-card h3{
-    padding-top:20px;
+.card-content{
+    padding:20px;
 }
 
-.product-card p{
-    padding:15px 20px 25px;
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
     color:#ccc;
 }
 
 /* Distributor Form */
 
-.form-container{
+.form-box{
     max-width:700px;
     margin:auto;
 }
@@ -124,7 +177,7 @@ button{
 
 /* Contact */
 
-.contact-box{
+.contact{
     text-align:center;
     line-height:2;
     font-size:18px;
@@ -133,9 +186,9 @@ button{
 /* Footer */
 
 footer{
-    border-top:1px solid #222;
     text-align:center;
     padding:30px;
+    border-top:1px solid #222;
 }
 
 /* WhatsApp */
@@ -156,33 +209,41 @@ footer{
 
 @media(max-width:768px){
 
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
     nav{
-        display:none;
+        flex-wrap:wrap;
+        justify-content:center;
     }
 
-    .hero h1{
-        font-size:42px;
-    }
-
-    .hero p{
-        font-size:18px;
+    .hero-logo{
+        width:250px;
     }
 
     .section-title{
         font-size:32px;
     }
+
+    .tagline{
+        font-size:18px;
+    }
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">
-    <img src="images/logo.jpg" alt="OG पेपर Logo">
-</div>
+```
+<a href="#home" class="logo">
+    <img src="logo.jpg" alt="OG Paper Logo">
+</a>
 
 <nav>
     <a href="#home">Home</a>
@@ -191,152 +252,148 @@ footer{
     <a href="#distributor">Become Distributor</a>
     <a href="#contact">Contact</a>
 </nav>
+```
 
 </header>
 
-<section class="hero" id="home">
+<section id="home" class="hero">
 
-<img src="images/logo.jpg" class="hero-logo" alt="OG पेपर Logo">
+```
+<img src="logo.jpg" alt="OG Paper Logo" class="hero-logo">
 
-<h1>OG पेपर</h1>
-
-<p>Every Day, The OG Way</p>
+<p class="tagline">
+    Every Day, The OG Way
+</p>
 
 <a href="#distributor" class="btn">
-Become Distributor
+    Become Distributor
 </a>
+```
 
 </section>
 
-<section class="about" id="about">
+<section id="about">
 
+```
 <h2 class="section-title">About Us</h2>
 
-<p>
-OG पेपर is a modern Indian rolling paper brand built around quality,
-simplicity and originality.
+<div class="about-content">
 
-Inspired by nature and designed for everyday use,
-our products deliver a smooth, reliable and premium experience.
+    <p>
+    OG Paper is a modern Indian rolling paper brand built around quality,
+    originality and consistency.
 
-Our vision is simple:
-to create authentic rolling papers that combine quality,
-clean design and originality.
-</p>
+    Inspired by nature and crafted for everyday use,
+    our products are designed to deliver a smooth and reliable experience
+    while maintaining a clean and authentic identity.
+    </p>
+
+</div>
+```
 
 </section>
 
 <section id="products">
 
-<h2 class="section-title">Our Products</h2>
+```
+<h2 class="section-title">Products</h2>
 
-<div class="products-grid">
+<div class="products">
 
-<div class="product-card">
-<img src="https://via.placeholder.com/600x400" alt="">
-<h3>OG Classic Papers</h3>
-<p>Premium slow-burning rolling papers crafted for a smooth experience.</p>
+    <div class="card">
+        <img src="logo.jpg" alt="">
+        <div class="card-content">
+            <h3>OG Rolling Papers</h3>
+            <p>Premium quality slow-burning rolling papers.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="logo.jpg" alt="">
+        <div class="card-content">
+            <h3>OG Filter Tips</h3>
+            <p>Strong and easy-to-roll premium filter tips.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="logo.jpg" alt="">
+        <div class="card-content">
+            <h3>OG Combo Pack</h3>
+            <p>Papers and filter tips together in one pack.</p>
+        </div>
+    </div>
+
 </div>
-
-<div class="product-card">
-<img src="https://via.placeholder.com/600x400" alt="">
-<h3>OG Filter Tips</h3>
-<p>High-quality filter tips designed for convenience and consistency.</p>
-</div>
-
-<div class="product-card">
-<img src="https://via.placeholder.com/600x400" alt="">
-<h3>OG Combo Pack</h3>
-<p>Rolling papers and filter tips together in one convenient pack.</p>
-</div>
-
-</div>
+```
 
 </section>
 
 <section id="distributor">
 
-<h2 class="section-title">Become a Distributor</h2>
+```
+<h2 class="section-title">Become Distributor</h2>
 
-<div class="form-container">
+<div class="form-box">
 
-<form action="https://formspree.io/f/yourformid" method="POST">
+    <form>
 
-<input
-type="text"
-name="name"
-placeholder="Full Name"
-required>
+        <input type="text" placeholder="Full Name" required>
 
-<input
-type="text"
-name="company"
-placeholder="Company Name">
+        <input type="text" placeholder="Company Name">
 
-<input
-type="tel"
-name="mobile"
-placeholder="Mobile Number"
-required>
+        <input type="tel" placeholder="Mobile Number" required>
 
-<input
-type="text"
-name="city"
-placeholder="City">
+        <input type="text" placeholder="City">
 
-<input
-type="text"
-name="state"
-placeholder="State">
+        <input type="text" placeholder="State">
 
-<textarea
-name="message"
-rows="5"
-placeholder="Tell us about your business">
-</textarea>
+        <textarea rows="5" placeholder="Tell us about your business"></textarea>
 
-<button type="submit">
-Submit Inquiry
-</button>
+        <button type="submit">
+            Submit Inquiry
+        </button>
 
-</form>
+    </form>
 
 </div>
+```
 
 </section>
 
 <section id="contact">
 
+```
 <h2 class="section-title">Contact Us</h2>
 
-<div class="contact-box">
+<div class="contact">
 
-<p>📞 +91 YOUR MOBILE NUMBER</p>
+    <p>📞 +91 YOUR NUMBER</p>
 
-<p>✉ youremail@example.com</p>
+    <p>✉ your@email.com</p>
 
-<p>📍 Navi Mumbai, Maharashtra</p>
+    <p>📍 Navi Mumbai, Maharashtra</p>
 
-<p>Instagram: @ogpaper</p>
+    <p>Instagram: @ogpaper</p>
 
 </div>
+```
 
 </section>
 
 <footer>
 
-© 2026 OG पेपर. All Rights Reserved.
+```
+© 2026 OG Paper. All Rights Reserved.
+```
 
 </footer>
 
 <a
-class="whatsapp"
 href="https://wa.me/91XXXXXXXXXX"
-target="_blank">
-
-WhatsApp
-
-</a>
+target="_blank"
+class="whatsapp">
+WhatsApp </a>
 
 </body>
 </html>
